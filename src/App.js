@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { QuizContext } from './ContextAPI/Contexts';
+import StartGameScreen from './Components/StartGameScreen';
+import EndGameScreen from './Components/EndGameScreen';
+import QuizScreen from './Components/QuizScreen';
+import Switch from "react-switch";
 
 function App() {
+
+  const [name,setName] = useState('')
+  const [gameState,setGameState] = useState('start')
+  const [theme,setTheme] = useState('light')
+  const [result,setResult] = useState(0)
+
+  const toggleTheme = ()=>{
+    setTheme(currTheme=>(currTheme === 'light'?'dark':'light'))
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <QuizContext.Provider value={{gameState,setGameState,name,setName,theme,result,setResult}}>
+      
+      <div className='d-flex flex-column justify-content-center align-items-center' id={theme} style={{height:'100vh'}}>
+      <div className='shadow p-5 border-rad box-width bg-color padding'>
+        {gameState === 'start' &&
+        <h3 className='text-center my-5 fw-bold'>Quiz App</h3>
+        }
+        {gameState === 'quiz' &&
+        <h3 className='text-center my-5'>Questions</h3>
+        }          
+              {gameState==='start' && <StartGameScreen/>}
+              {gameState==='quiz' && <QuizScreen/>}
+              {gameState==='end' && <EndGameScreen/>}
+          </div>
+      <Switch className='my-5'onChange={toggleTheme} checked={theme==='light'}/>
+
+      </div>
+    </QuizContext.Provider>
+    </>
   );
 }
 

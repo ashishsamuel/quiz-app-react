@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+#light{
+    background-color: lightskyblue;
+  }
+  
+  #dark{
+    background-color: black;
+  }
+
+  #light .bg-color{
+    background-color: lightyellow;
+  }
+
+  #dark .bg-color{
+    background-color: khaki;
+  }
+
+  .border-rad{
+    border-radius: 30px;
+  }
+
+  .box-width{
+    width: 550px;
+  }
+
+  .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+    font-weight: bold !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused {
+  color: black !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root {
+    font-weight: bold !important;
+}
+
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+    color: black !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    font-weight: bold !important;
+}
+
+.playnow-button{
+    font-weight: bold !important;
+    background-color: lightcyan !important;
+    color: black !important;
+}
+
+.result-detailsbox-width{
+  width: 270px;
+}
+
+.endscreen-container{
+  width: 400px;
+}
+
+.questions-section{
+  width: 400px;
+  margin-left: 20px !important;
+}
+
+.option-button{
+  background-color: gray !important;
+}
+
+.toast-message{
+  width: 25vw;
+  background-color: black !important;
+}
+
+@media screen and (min-width:360px) and (max-width:600px) {
+  .result-detailsbox-width{
+      width: 200px;
+  }
+  .endscreen-container{
+      width: 250px !important;
+  }
+  .padding{
+    padding-top: 0px !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @media screen and (max-width:600px) {
+    .box-width{
+        width: 350px;
+      }
+      .questions-section{
+        width: 250px;
+        margin-left: 0px !important;
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
