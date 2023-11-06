@@ -81,11 +81,6 @@
     padding-top: 0px !important;
   }
 
-  .questions-section{
-    width: 250px;
-    margin-left: 0px !important;
-}
-
   .toast-message{
     width: auto;
   }
@@ -97,7 +92,7 @@
 
   @media screen and (max-width:600px) {
     .box-width{
-        width: 200px;
+        width: 350px;
       }
       .questions-section{
         width: 250px;
