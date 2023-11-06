@@ -27,7 +27,7 @@ function App() {
         <h3 className='text-center my-5 fw-bold'>Quiz App</h3>
         }
         {gameState === 'quiz' &&
-        <h3 className='text-center my-5'>Questions</h3>
+        <h3 className='text-center mb-5'>Questions</h3>
         }          
               {gameState==='start' && <StartGameScreen/>}
               {gameState==='quiz' && <QuizScreen/>}
