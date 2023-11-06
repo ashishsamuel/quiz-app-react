@@ -21,7 +21,7 @@ function App() {
     <>
     <QuizContext.Provider value={{gameState,setGameState,name,setName,theme,result,setResult}}>
       
-      <div className='d-flex flex-column justify-content-center align-items-center' id={theme} style={{height:'100vh'}}>
+      <div className='d-flex flex-column justify-content-center align-items-center w-auto' id={theme} style={{height:'100vh'}}>
       <div className='shadow p-5 border-rad box-width bg-color padding'>
         {gameState === 'start' &&
         <h3 className='text-center my-5 fw-bold'>Quiz App</h3>
