@@ -84,6 +84,10 @@
   .toast-message{
     width: auto;
   }
+
+  .w-auto{
+    width: auto;
+  }
 }
 
   @media screen and (max-width:600px) {

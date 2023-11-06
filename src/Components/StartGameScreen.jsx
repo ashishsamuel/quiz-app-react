@@ -24,7 +24,7 @@ function StartGameScreen() {
 
   return (
       <>
-          <div className='d-flex flex-column align-items-center'>
+          <div className='d-flex flex-column align-items-center w-auto'>
                 <TextField onChange={(e)=>getPlayerName(e.target.value)} id="outlined-basic" label="Player Name" variant="outlined" placeholder='Enter your name...'/>
                 <Button variant="contained" className='my-4 playnow-button' onClick={startGame}>Play Now</Button>
           </div>
