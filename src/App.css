@@ -70,33 +70,31 @@
   background-color: black !important;
 }
 
-.padding{
-  padding: 65px;
-}
-
 @media screen and (min-width:330px) and (max-width:600px) {
   .result-detailsbox-width{
-      width: 190px;
+      width: 200px;
   }
   .endscreen-container{
       width: 250px !important;
   }
   .padding{
-    padding: 50px !important;
+    padding-top: 0px !important;
   }
 
   .toast-message{
     width: auto;
   }
+}
 
-  .box-width{
-    width: 350px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  @media screen and (max-width:600px) {
+    .box-width{
+        width: 350px;
+      }
+      .questions-section{
+        width: 250px;
+        margin-left: 0px !important;
+    }
+    .toast-message{
+      width: auto;
+    }
   }
-  .questions-section{
-    width: 250px;
-    margin-left: 0px !important;
-}
-}

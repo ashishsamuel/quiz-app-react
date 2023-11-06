@@ -79,7 +79,7 @@ function QuizScreen() {
     return (
         <>
         <div className='w-100'>
-            <h5 className='mt-1 mb-3'>{Questions[currentQuestion].qno}. <span className='ms-1'>{Questions[currentQuestion].question}</span></h5>
+            <h5 className='mt-5 mb-3'>{Questions[currentQuestion].qno}. <span className='ms-1'>{Questions[currentQuestion].question}</span></h5>
             <Row className='questions-section'>
                 <Col sm={12} md={6} className='d-grid'>
                     <button onClick={()=>optionClick('A')} className='btn my-2 rounded text-light fw-bold' style={{backgroundColor:buttonBgColorOptionA}}>{Questions[currentQuestion].optionA}</button>

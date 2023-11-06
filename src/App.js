@@ -22,12 +22,12 @@ function App() {
     <QuizContext.Provider value={{gameState,setGameState,name,setName,theme,result,setResult}}>
       
       <div className='d-flex flex-column justify-content-center align-items-center' id={theme} style={{height:'100vh'}}>
-      <div className='shadow border-rad box-width bg-color padding'>
+      <div className='shadow p-5 border-rad box-width bg-color padding'>
         {gameState === 'start' &&
-        <h3 className='text-center mt-5 mb-4 fw-bold'>Quiz App</h3>
+        <h3 className='text-center my-5 fw-bold'>Quiz App</h3>
         }
         {gameState === 'quiz' &&
-        <h3 className='text-center mt-2 mb-3'>Questions</h3>
+        <h3 className='text-center my-5'>Questions</h3>
         }          
               {gameState==='start' && <StartGameScreen/>}
               {gameState==='quiz' && <QuizScreen/>}
